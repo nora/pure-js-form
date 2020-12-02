@@ -1,0 +1,10 @@
+.error {
+  font-size: .8rem;
+  max-width: 300px;
+  color: crimson;
+}
+
+input.changed:invalid,
+select.changed:invalid {
+  border-color: crimson;
+}

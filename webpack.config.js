@@ -12,6 +12,6 @@ module.exports = {
     hot: true,
     hotOnly: true,
     publicPath: '/assets',
-    port: 3001,
+    port: 3000,
   },
 }

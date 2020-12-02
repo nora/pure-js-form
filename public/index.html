@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/mvp.css">
+    <style>
+      .error {
+        font-size: .8rem;
+        color: crimson;
+      }
+      input.changed:invalid,
+      select.changed:invalid {
+        border-color: crimson;
+      }
+    </style>
     <script src="assets/index.js" defer></script>
     <title>Document</title>
   </head>
@@ -13,51 +23,38 @@
     </header>
     <main>
       <section>
-        <form>
+        <form name="form">
           <div>
             <label>名前</label>
+            <p class="error" data-attr-name="name"></p>
             <input
               type="text"
               name="name"
-              required
               maxlength="8"
-            />
-            <span class="error" data-name="name">エラーメッセージ</span>
-          </div>
-          <div>
-            <label>性別</label>
-            <select name="gender" required>
-              <option value="">選択してください</option>
-              <option value="male">男性</option>
-              <option value="famale">女性</option>
-              <option value="non-binary">どちらでもない</option>
-            </select>
-            <span class="error" data-name="gender">エラーメッセージ</span>
-          </div>
-          <div>
-            <label>PR</label>
-            <textarea
-              name="comment"
-              minlength="5"
-              maxlength="30"
               required
-            ></textarea>
-            <span class="error" data-name="comment">エラーメッセージ</span>
+            />
           </div>
           <div>
-            <label>
-              <input
-                type="checkbox"
-                name="agreement"
-                value="1"
-                required
-              />
-              <a>利用規約</a>に同意しました
-            </label>
-            <span class="error" data-name="agreement">エラーメッセージ</span>
+            <label>メールアドレス</label>
+            <p class="error" data-attr-name="email"></p>
+            <input
+              type="email"
+              name="email"
+              required
+            />
           </div>
           <div>
-            <button type="submit">登録</button>
+            <label>好きな味</label>
+            <p class="error" data-attr-name="flavor"></p>
+            <select name="flavor" required>
+              <option value="">選択してください</option>
+              <option value="vanilla">バニラ</option>
+              <option value="maccha">抹茶</option>
+            </select>
+          </div>
+          <p class="error" data-attr-name="form"></p>
+          <div>
+            <button>登録</button>
           </div>
         </form>
       </section>

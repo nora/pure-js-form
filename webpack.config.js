@@ -1,11 +1,9 @@
 const path = require('path')
 module.exports = {
   mode: 'development',
-  entry: {
-    index: './src/index.js',
-  },
+  entry: './src/index.js',
   output: {
-    filename: '[name].js',
+    filename: 'index.js',
     path: path.resolve(__dirname, 'public/assets'),
   },
   devtool: 'inline-source-map',
@@ -13,7 +11,7 @@ module.exports = {
     contentBase: 'public',
     hot: true,
     hotOnly: true,
-    publicPath: 'assets',
-    port: 3000,
+    publicPath: '/assets',
+    port: 3001,
   },
 }

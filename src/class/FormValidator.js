@@ -46,7 +46,7 @@ export class FormValidator extends Validator {
    */
   async handleSubmit(event) {
     event.preventDefault()
-    ;(await this.validateAll()) && this.formContainer.submit()
+    ;(await this.validate()) && this.formContainer.submit()
   }
 
   /**
@@ -56,7 +56,7 @@ export class FormValidator extends Validator {
     return this.inputValidators.find(({ name }) => name === lookingName)
   }
 
-  async validateAll() {
+  async validate() {
     if (!this.isValid) return false
 
     if (this.remoteValidate) {

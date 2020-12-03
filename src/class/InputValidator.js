@@ -27,7 +27,7 @@ export class InputValidator extends Validator {
   }
 
   addChangedClass() {
-    return this.inputElement.classList.add(this.CHANGED_CLASS_NAME)
+    return this.inputElement.classList.add(InputValidator.CHANGED_CLASS_NAME)
   }
 
   get isValid() {
@@ -43,7 +43,7 @@ export class InputValidator extends Validator {
   }
 
   get errorMessageElementSelector() {
-    return `[${this.ERROR_MESSAGE_ATTRIBUTE_NAME}="${this.name}"]`
+    return `[${InputValidator.ERROR_MESSAGE_ATTRIBUTE_NAME}="${this.name}"]`
   }
 
   /**

@@ -4,11 +4,11 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'index.js',
-    path: path.resolve(__dirname, 'public/assets'),
+    path: path.resolve(__dirname, 'docs/assets'),
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: 'public',
+    contentBase: 'docs',
     hot: true,
     hotOnly: true,
     publicPath: '/assets',

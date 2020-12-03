@@ -1,5 +1,5 @@
 # pure-js-form
 
-記事用
+デモページ
 
-コミット雑ですみません～
+https://nora.github.io/pure-js-form/
